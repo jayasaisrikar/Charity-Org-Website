@@ -16,11 +16,29 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://snehitham.org";
+const title = "Snehitham Charity Group — Educate a child, empower a future";
+const description =
+  "Snehitham Charity Group works to bring quality education to underserved children — from school to society. Educate a child, empower a future.";
+
 export const metadata: Metadata = {
-  title: "Snehitham Charity Group — Educate a child, empower a future",
-  description:
-    "Snehitham Charity Group works to bring quality education to underserved children — from school to society. Educate a child, empower a future.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
   manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Snehitham Charity Group",
+    title,
+    description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
