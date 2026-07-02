@@ -6,7 +6,7 @@ export const org = {
   full: "Snehitham Charity Group",
   tagline: "Educate a child, empower a future",
   motto: "School to Society",
-  email: "hello@snehitham.org",
+  email: "brmbujji@gmail.com",
   phone: "+91 91332 33733",
   phoneAlt: "+91 94395 22284",
   address: {
