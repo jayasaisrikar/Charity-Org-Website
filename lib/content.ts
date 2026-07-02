@@ -7,11 +7,11 @@ export const org = {
   tagline: "Educate a child, empower a future",
   motto: "School to Society",
   email: "hello@snehitham.org",
-  phone: "+91 98765 43210",
-  phoneAlt: "+91 98765 43211",
+  phone: "+91 91332 33733",
+  phoneAlt: "+91 94395 22284",
   address: {
-    line1: "12 Gandhi Road, Sneha Nagar",
-    line2: "Hyderabad, Telangana 500001",
+    line1: "Hindustan Shipyard Colony",
+    line2: "Visakhapatnam, Andhra Pradesh 530005",
   },
 };
 
