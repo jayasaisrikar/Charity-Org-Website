@@ -16,7 +16,16 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://snehitham.org";
+// Resolve the public site URL for absolute OG/Twitter image links.
+// Priority: explicit override → Vercel production domain → current Vercel
+// deployment → local dev fallback.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3001";
 const title = "Snehitham Charity Group — Educate a child, empower a future";
 const description =
   "Snehitham Charity Group works to bring quality education to underserved children — from school to society. Educate a child, empower a future.";
