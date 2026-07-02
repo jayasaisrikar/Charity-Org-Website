@@ -169,25 +169,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="container-page py-16">
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-4xl border border-plum/10 bg-white p-8 text-center"
-            >
-              <p className="font-display text-4xl font-semibold text-magenta sm:text-5xl">
-                {s.value}
-              </p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-ink/60">
-                {s.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Programs */}
       <section className="container-page py-12">
         <SectionHeading
